@@ -84,6 +84,9 @@ public class Ship {
 	}
 
 	public void placeShipAt(int row, int column, boolean horizontal, Ocean ocean) {
+		bowRow = row;
+		bowColumn = column;
+		horizontal = true;
 
 	}
 

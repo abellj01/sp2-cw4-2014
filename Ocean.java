@@ -2,6 +2,10 @@ package battleshipAy;
 
 import java.util.Random;
 
+/**
+ * @author abellj01
+ *
+ */
 public class Ocean {
 
 	private Ship[][] ships;
@@ -9,12 +13,12 @@ public class Ocean {
 	private int hitCount;
 	private int shipsSunk;
 
-	public Ocean(Ship[][] ships, int shotsFired, int hitCount, int shipsSunk) {
-		super();
+	public Ocean() {
 		ships = new Ship[10][10];
-		this.shotsFired = shotsFired;
-		this.hitCount = hitCount;
-		this.shipsSunk = shipsSunk;
+		shotsFired = 0;
+		hitCount = 0;
+		shipsSunk = 0;
+
 	}
 
 	public void placeAllShipsRandomly() {
@@ -24,6 +28,9 @@ public class Ocean {
 	}
 
 	public boolean isOccupied(int row, int column) {
+		if(ships[row][column] != null){
+			return true;
+		}
 		return false;
 
 	}
@@ -54,6 +61,9 @@ public class Ocean {
 		return shipsSunk;
 	}
 
+	/**
+	 * @return
+	 */
 	public boolean isGameOver() {
 		return false;
 
@@ -66,8 +76,17 @@ public class Ocean {
 		return ships;
 	}
 
-	private void print() {
+	void print() {
 
+		for (int i = 0; i < 10; i++) {
+			//System.out.println(i);
+			for (int j = 0; j < 10; j++) {
+				// Initialises each square of the ocean
+				ships[i][j] = new EmptySea();
+				System.out.print(" " + ships[i][j]);
+			}
+			System.out.println();
+		}
 	}
 
 }

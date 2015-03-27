@@ -24,7 +24,7 @@ public class Battleship extends Ship {
 	 */
 	@Override
 	public String getShipType() {
-		return "";
+		return "This is a battleship";
 	}
 
 }
