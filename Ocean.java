@@ -33,7 +33,11 @@ public class Ocean {
 	}
 
 	public boolean isOccupied(int row, int column) {
+<<<<<<< HEAD
 		if (ships[row][column] != new EmptySea()) {
+=======
+		if(ships[row][column] != null){
+>>>>>>> 4fde76f9b333c0060944f764528f210f66494ea2
 			return true;
 		}
 		return false;
@@ -79,9 +83,13 @@ public class Ocean {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Checks the state of the game
 	 * 
 	 * @return true or false
+=======
+	 * @return
+>>>>>>> 4fde76f9b333c0060944f764528f210f66494ea2
 	 */
 	public boolean isGameOver() {
 		if (shipsSunk == 10) {
@@ -101,6 +109,7 @@ public class Ocean {
 	}
 
 	void print() {
+<<<<<<< HEAD
 		for (int i = 0; i < 10; i++) {
 			//System.out.print(" ");
 			System.out.print(" " + i);
@@ -109,6 +118,11 @@ public class Ocean {
 
 		for (int i = 0; i < 10; i++) {
 			System.out.print(i + " ");
+=======
+
+		for (int i = 0; i < 10; i++) {
+			//System.out.println(i);
+>>>>>>> 4fde76f9b333c0060944f764528f210f66494ea2
 			for (int j = 0; j < 10; j++) {
 				// Initialises each square of the ocean
 				ships[i][j] = new EmptySea();

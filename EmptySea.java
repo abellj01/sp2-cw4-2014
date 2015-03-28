@@ -36,8 +36,13 @@ public class EmptySea extends Ship {
 	 */
 	@Override
 	public String toString() {
+<<<<<<< HEAD
 		// It will be used to initialise cells in ocean
 		return ".";
+=======
+		//It will be used to initialise cells in ocean 
+		return "0";
+>>>>>>> 4fde76f9b333c0060944f764528f210f66494ea2
 	}
 
 }

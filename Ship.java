@@ -90,11 +90,17 @@ public class Ship {
 	}
 
 	public void placeShipAt(int row, int column, boolean horizontal, Ocean ocean) {
+<<<<<<< HEAD
 		if (okToPlaceShipAt(row, column, horizontal, ocean)) {
 			setBowRow(row);
 			setBowColumn(column);
 			setHorizontal(horizontal);
 		}
+=======
+		bowRow = row;
+		bowColumn = column;
+		horizontal = true;
+>>>>>>> 4fde76f9b333c0060944f764528f210f66494ea2
 
 	}
 
