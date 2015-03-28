@@ -55,6 +55,8 @@ public class Ship {
 	}
 
 	/**
+	 * Sets value for first cell in row
+	 * 
 	 * @param row
 	 */
 	public void setBowRow(int row) {
@@ -62,6 +64,8 @@ public class Ship {
 	}
 
 	/**
+	 * Sets value for first cell in column
+	 * 
 	 * @param column
 	 */
 	public void setBowColumn(int column) {
@@ -69,6 +73,8 @@ public class Ship {
 	}
 
 	/**
+	 * Sets position of the ship
+	 * 
 	 * @param horizontal
 	 */
 	public void setHorizontal(boolean horizontal) {
@@ -84,6 +90,11 @@ public class Ship {
 	}
 
 	public void placeShipAt(int row, int column, boolean horizontal, Ocean ocean) {
+		if (okToPlaceShipAt(row, column, horizontal, ocean)) {
+			setBowRow(row);
+			setBowColumn(column);
+			setHorizontal(horizontal);
+		}
 
 	}
 
