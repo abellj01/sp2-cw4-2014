@@ -7,6 +7,9 @@ public class Battleship extends Ship {
 	public Battleship() {
 		length = 4;
 		hit = new boolean[3];
+		for (int i = 0; i < 4; i++) {
+			hit[i]= false;
+		}
 
 	}
 
@@ -24,7 +27,7 @@ public class Battleship extends Ship {
 	 */
 	@Override
 	public String getShipType() {
-		return "";
+		return "This is a battleship";
 	}
 
 }

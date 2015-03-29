@@ -8,6 +8,9 @@ public class Submarine extends Ship {
 
 		length = 1;
 		hit = new boolean[0];
+		for (int i=0; i<hit.length; i++){
+			hit[i] = false;
+		}
 	
 	}
 	
@@ -16,7 +19,7 @@ public class Submarine extends Ship {
 	 */
 	@Override
 	public String getShipType() {
-		return "";
+		return "This is a submarine";
 	}
 
 	/* (non-Javadoc)
