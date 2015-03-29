@@ -2,24 +2,37 @@ package battleshipAy;
 
 import java.util.Arrays;
 
+/**
+ * This program simulates a battle ship game
+ * 
+ * @author AbJr
+ * @version 290315
+ */
 public class Submarine extends Ship {
 
 	public Submarine() {
 
 		length = 1;
 		hit = new boolean[0];
-	
+		for (int i = 0; i < hit.length; i++) {
+			hit[i] = false;
+		}
+
 	}
-	
-	/* (non-Javadoc)
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see battleshipAy.Ship#getShipType()
 	 */
 	@Override
 	public String getShipType() {
-		return "";
+		return "This is a submarine";
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
@@ -27,10 +40,5 @@ public class Submarine extends Ship {
 		return "Submarine [length=" + length + ", hit=" + Arrays.toString(hit)
 				+ "]";
 	}
-	
-	
-	
-	
 
 }
-

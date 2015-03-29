@@ -1,13 +1,22 @@
 package battleshipAy;
 
 import java.util.Arrays;
-
+/**
+ * This program simulates a battle ship game
+ * 
+ * @author AbJr
+ * @version 290315
+ */
 public class Destroyer extends Ship {
 
 	public Destroyer() {
 
 		length = 2;
 		hit = new boolean[1];
+		for (int i = 0; i < 2; i++) {
+			hit[i]= false;
+		}
+
 	}
 	
 	/* (non-Javadoc)
@@ -15,7 +24,7 @@ public class Destroyer extends Ship {
 	 */
 	@Override
 	public String getShipType() {
-		return "";
+		return "This is a destroyer";
 	}
 
 	/* (non-Javadoc)
