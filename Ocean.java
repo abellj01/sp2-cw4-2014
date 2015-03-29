@@ -2,8 +2,11 @@ package battleshipAy;
 
 import java.util.Random;
 
+<<<<<<< HEAD
 import org.hamcrest.core.IsSame;
 
+=======
+>>>>>>> 6bc314e0e714e71fed341c6fc0db64b4f9f7decf
 /**
  * @author abellj01
  *
@@ -35,7 +38,15 @@ public class Ocean {
 	}
 
 	public boolean isOccupied(int row, int column) {
+<<<<<<< HEAD
 		if (ships[row][column] != new EmptySea() && (row>=0 && row<=9 && column>=0 && column<=9)) {
+=======
+<<<<<<< HEAD
+		if (ships[row][column] != new EmptySea()) {
+=======
+		if(ships[row][column] != null){
+>>>>>>> 4fde76f9b333c0060944f764528f210f66494ea2
+>>>>>>> 6bc314e0e714e71fed341c6fc0db64b4f9f7decf
 			return true;
 		}
 		return false;
@@ -43,6 +54,7 @@ public class Ocean {
 	}
 
 	public boolean shootAt(int row, int column) {
+<<<<<<< HEAD
 		Ship s = ships[row][column];
 		if (isOccupied(row, column) && !s.isSunk()) {
 			shotsFired++;
@@ -55,6 +67,14 @@ public class Ocean {
 		}
 
 		shotsFired++;
+=======
+		if (isOccupied(row, column)){
+			shotsFired ++;
+			hitCount ++;
+			return true;
+		}
+		shotsFired ++;
+>>>>>>> 6bc314e0e714e71fed341c6fc0db64b4f9f7decf
 		return false;
 
 	}
@@ -87,9 +107,19 @@ public class Ocean {
 	}
 
 	/**
+<<<<<<< HEAD
 	 * Checks the state of the game
 	 * 
 	 * @return true or false
+=======
+<<<<<<< HEAD
+	 * Checks the state of the game
+	 * 
+	 * @return true or false
+=======
+	 * @return
+>>>>>>> 4fde76f9b333c0060944f764528f210f66494ea2
+>>>>>>> 6bc314e0e714e71fed341c6fc0db64b4f9f7decf
 	 */
 	public boolean isGameOver() {
 		if (shipsSunk == 10) {
@@ -109,15 +139,29 @@ public class Ocean {
 	}
 
 	void print() {
+<<<<<<< HEAD
 		System.out.print(" " + " ");
 		for (int i = 0; i < 10; i++) {
 
+=======
+<<<<<<< HEAD
+		for (int i = 0; i < 10; i++) {
+			//System.out.print(" ");
+>>>>>>> 6bc314e0e714e71fed341c6fc0db64b4f9f7decf
 			System.out.print(" " + i);
 		}
 		System.out.println();
 
 		for (int i = 0; i < 10; i++) {
 			System.out.print(i + " ");
+<<<<<<< HEAD
+=======
+=======
+
+		for (int i = 0; i < 10; i++) {
+			//System.out.println(i);
+>>>>>>> 4fde76f9b333c0060944f764528f210f66494ea2
+>>>>>>> 6bc314e0e714e71fed341c6fc0db64b4f9f7decf
 			for (int j = 0; j < 10; j++) {
 				// Initialises each square of the ocean
 				ships[i][j] = new EmptySea();
