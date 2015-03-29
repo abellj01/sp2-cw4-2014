@@ -7,6 +7,10 @@ public class Cruiser extends Ship {
 	public Cruiser() {
 		length = 3;
 		hit = new boolean[2];
+		for (int i = 0; i < 3; i++) {
+			hit[i]= false;
+		}
+
 	}
 	
 	/* (non-Javadoc)
@@ -14,7 +18,7 @@ public class Cruiser extends Ship {
 	 */
 	@Override
 	public String getShipType() {
-		return "";
+		return "This is a cruiser";
 	}
 
 	/* (non-Javadoc)

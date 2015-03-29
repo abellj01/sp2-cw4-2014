@@ -6,8 +6,8 @@ public class Ship {
 	private int bowColumn;
 	protected int length;
 
-	private boolean horizontal;
-	protected boolean[] hit;
+	private boolean horizontal = true;
+	protected boolean[] hit = new boolean[4];
 
 	/**
 	 * Accessor method for the first cell on the row
@@ -55,20 +55,32 @@ public class Ship {
 	}
 
 	/**
+	 * Sets value for first cell in row
+	 * 
 	 * @param row
 	 */
 	public void setBowRow(int row) {
-		bowRow = row;
+		if (row >= 0 && row <= 9) {
+			bowRow = row;
+		}
+		bowRow = 0;
 	}
 
 	/**
+	 * Sets value for first cell in column
+	 * 
 	 * @param column
 	 */
 	public void setBowColumn(int column) {
-		bowColumn = column;
+		if (column >= 0 && column <= 9) {
+			bowColumn = column;
+		}
+		bowColumn = 0;
 	}
 
 	/**
+	 * Sets position of the ship
+	 * 
 	 * @param horizontal
 	 */
 	public void setHorizontal(boolean horizontal) {
@@ -77,13 +89,33 @@ public class Ship {
 
 	public boolean okToPlaceShipAt(int row, int column, boolean horizontal,
 			Ocean ocean) {
-		if (bowRow == row && bowColumn == column && isHorizontal()) {
+		if (row >= 0 && row <= 9 && column >= 0 && (column + length <= 9)
+				&& isHorizontal()) {
 			return true;
+		} else if (row >= 0 && (row + length <= 9) && column >= 0
+				&& column <= 9 && !isHorizontal()) {
+			return true;
+		} else {
+			return false;
 		}
-		return false;
+
 	}
 
 	public void placeShipAt(int row, int column, boolean horizontal, Ocean ocean) {
+		setBowRow(row);
+		setBowColumn(column);
+		setHorizontal(horizontal);
+
+		if (okToPlaceShipAt(row, column, horizontal, ocean)) {
+			for (int i = 0; i < length; i++) {
+				if (isHorizontal()) {
+					ocean.getShipArray()[row][column + i] = new Ship();
+				} else {
+					ocean.getShipArray()[row + i][column] = new Ship();
+				}
+			}
+
+		}
 
 	}
 
