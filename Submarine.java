@@ -14,10 +14,17 @@ public class Submarine extends Ship {
 
 		length = 1;
 		hit = new boolean[0];
+<<<<<<< HEAD
 		for (int i = 0; i < hit.length; i++) {
 			hit[i] = false;
 		}
 
+=======
+		for (int i=0; i<hit.length; i++){
+			hit[i] = false;
+		}
+	
+>>>>>>> cfeba341bf404498f1057745bd7a59bd6bb407b7
 	}
 
 	/*

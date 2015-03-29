@@ -14,7 +14,11 @@ public class Battleship extends Ship {
 		length = 4;
 		hit = new boolean[3];
 		for (int i = 0; i < 4; i++) {
+<<<<<<< HEAD
 			hit[i] = false;
+=======
+			hit[i]= false;
+>>>>>>> cfeba341bf404498f1057745bd7a59bd6bb407b7
 		}
 
 	}

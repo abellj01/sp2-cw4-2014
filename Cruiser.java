@@ -14,7 +14,11 @@ public class Cruiser extends Ship {
 		length = 3;
 		hit = new boolean[2];
 		for (int i = 0; i < 3; i++) {
+<<<<<<< HEAD
 			hit[i] = false;
+=======
+			hit[i]= false;
+>>>>>>> cfeba341bf404498f1057745bd7a59bd6bb407b7
 		}
 
 	}
